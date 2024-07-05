@@ -1,0 +1,52 @@
+@import "../../styles/variaveis";
+@import "../../styles/mixins";
+
+.container-menu {
+  height: 50px;
+  background-color: $gray200;
+  padding: 0 20px;
+  @include align-between;
+
+  .logo {
+    @include subTitulo;
+    cursor: pointer;
+  }
+
+  .list-menu {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .list-item {
+      @include paragrafo;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .list-item::before {
+      @include efeito-linha-crescendo;
+    }
+
+    .list-item:hover::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .profile {
+    width: 35px;
+    height: 35px;
+    background-color: $gray500;
+    border-radius: 50%;
+
+    cursor: pointer;
+    @include align-center;
+
+    span {
+      color: $gray100;;
+    }
+
+  }
+}

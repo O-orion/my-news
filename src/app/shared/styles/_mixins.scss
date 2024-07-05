@@ -1,0 +1,66 @@
+@import "./variaveis";
+
+@mixin destaque {
+  font-family: "Raleway", sans-serif;
+  color: $gray500;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+@mixin headline {
+  font-family: "Raleway", sans-serif;
+  color: $gray500;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+@mixin subHeadline {
+  font-family: "Raleway", sans-serif;
+  color: $gray500;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+@mixin titulo {
+  font-family: "Raleway", sans-serif;
+  color: $gray500;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+@mixin subTitulo {
+  font-family: "Raleway", sans-serif;
+  color: $gray500;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@mixin paragrafo {
+  font-family: "Raleway", sans-serif;
+  color: $gray500;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@mixin align-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin efeito-linha-crescendo {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 100%;
+  width: 0;
+  height: 2px;
+  background-color: $white; /* Cor da linha */
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
